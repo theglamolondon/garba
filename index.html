@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>GARBA APP</title>
+    <link rel="stylesheet" href="css/stylepage.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/chanelle.js"></script>
 </head>
-<body>
-$END$
+<body ng-app="garba" class="row">
+    <div id="main" class="col-md-8 col-lg-offset-2 " class="row">
+        <section ng-controller="bandeauCtrl" class="col-md-12">
+            <h1>bandeau</h1>
+
+        </section>
+        <section ng-controller="gaucheCtrl" class="col-md-3">
+            <h1>gauche</h1>
+            <p><a href="javascript:void()">Ingrédients</a></p>git
+            <p>Piments</p>
+            <p>Tomates</p>
+            <p>Oignons</p>
+            <p>Huile</p>
+            <p>Poisson</p>
+            <p>Attieke</p>
+            <p>Mayonnaise</p>
+        </section>
+        <section ng-controller="milieuCtrl" class="col-md-7">
+            <h1>milieu</h1>
+        </section>
+        <section ng-controller="droitCtrl" class="col-md-2">
+            <h1>droit</h1>
+        </section>
+        <section ng-controller="piedCtrl" class="col-md-12">
+            <h1>pied</h1>
+        </section>
+    </div>
 </body>
 </html>
