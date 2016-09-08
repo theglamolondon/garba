@@ -6,51 +6,48 @@
     <link rel="stylesheet" href="css/stylepage.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <script src="js/angular.min.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <link rel="stylesheet" href="node_modules/angular/angular-csp.css">
+    <script type="text/javascript" src="js/chanelle.js"></script>
+
 </head>
-<body ng-app="garba" class="row">
+<body ng-app="demo" class="row">
     <div id="main" class="col-md-8 col-lg-offset-2 " class="row">
-        <section ng-controller="bandeauCtrl" class="col-md-12">
+        <section class="col-md-12">
             <h1>bandeau</h1>
-
         </section>
-        <section ng-controller="gaucheCtrl" class="col-md-3">
-            <h1>Ingrédients</h1>
-            <div>
-                <p ng-repeat="ing in ingredients">
-                    <a href="javascript:void()">{{ing.nom}}</a>
-                </p>
+
+        <section ng-controller="gaucheCtrl" class="col-md-3 three-col">
+            <h2>Ingrédients</h2>
+            <div ng-repeat="ing in ingredients" class="ingredient">
+                <a href="#">{{ing.nom}}</a>
+                <span class="hidden">{{ing.prix}} Fcfa</span>
             </div>
+        </section>
 
-        </section>
-        <section ng-controller="milieuCtrl" class="col-md-7">
+        <section class="col-md-7 three-col">
             <h1>milieu</h1>
+            <div class="controls row">
+                <input type="button" class="col-md-5 form-control glyphicon glyphicon-remove" value="Annuler"/>
+                <input type="button" class="col-md-offset-2 col-md-5 form-control glyphicon glyphicon-plus" value="Commander"/>
+            </div>
         </section>
-        <section ng-controller="droitCtrl" class="col-md-2">
-            <h1>droit</h1>
+
+        <section class="col-md-2 three-col" ng-controller="droitCtrl">
+            <h2>Net à payer</h2>
+            <div class="nap">
+                {{totalcmde}} Fcfa
+            </div>
+            <div class="numcmde">
+                <span>Commande N°</span>
+                <strong>#{{numerocomde}}</strong>
+            </div>
         </section>
-        <section ng-controller="piedCtrl" class="col-md-12">
+
+        <section class="col-md-12">
             <h1>pied</h1>
+            <input ng-model="totalcmde">
         </section>
     </div>
-
-    <script type="text/javascript">
-        function gaucheCtrl($scope)
-        {
-            $scope.ingredients=[
-                {"nom":"piment","prix":50},
-                {"nom":"tomate","prix":25},
-                {"nom":"oignon","prix":25},
-                {"nom":"huile","prix":0},
-                {"nom":"posson","prix":400},
-                {"nom":"attieké","prix":100},
-                {"nom":"mayonnaise","prix":50},
-                {"nom":"coca-cola","prix":50},
-                {"nom":"eau","prix":50}
-            ];
-
-        }
-    </script>
-    <script src="js/chanelle.js"></script>
 </body>
 </html>

@@ -1,3 +1,39 @@
 section {
     border: 1px solid;
 }
+.ingredient{
+    position: relative;
+}
+.ingredient a {
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.ingredient:hover span.hidden {
+    border: 1px solid darkgrey;
+    display: block !important;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+    left: 97%;
+    position: absolute;
+    top: 8%;
+    visibility: visible !important;
+}
+#main .three-col{
+    min-height: 460px;
+    display: block;
+}
+.numcmde {
+    border-top: 20px solid purple;
+    margin-top: 54px;
+    padding: 10px 0 0;
+}
+.numcmde > span {
+    font-size: 1.3em;
+}
+.numcmde strong {
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+}
