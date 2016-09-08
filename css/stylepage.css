@@ -37,3 +37,8 @@ section {
     font-weight: bold;
     text-align: center;
 }
+.controls.row {
+    bottom: 22%;
+    position: relative;
+    width: inherit;
+}

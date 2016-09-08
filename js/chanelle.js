@@ -11,7 +11,7 @@ angular.module('demo', [])
             {"nom":"poisson","prix":400},
             {"nom":"attieké","prix":100},
             {"nom":"mayonnaise","prix":50},
-            {"nom":"coca-cola","prix":50},
+            {"nom":"coca-cola","prix":300},
             {"nom":"eau","prix":50}
         ];
         $rootScope.totalcmde = 0;
